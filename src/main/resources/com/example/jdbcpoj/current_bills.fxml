@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="window" prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jdbcpoj.CurrentBillsController">
+   <children>
+      <TableView fx:id="table" layoutX="403.0" layoutY="206.0" prefHeight="387.0" prefWidth="744.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id_счёта" />
+          <TableColumn fx:id="check_in" prefWidth="110.0" text="Дата заселения" />
+            <TableColumn fx:id="eviction" prefWidth="110.0" text="Дата выселения" />
+            <TableColumn fx:id="amount" prefWidth="75.0" text="Сумма" />
+            <TableColumn fx:id="surname" prefWidth="120.0" text="Фамилия клиента" />
+            <TableColumn fx:id="name" prefWidth="120.0" text="Имя клиента" />
+            <TableColumn fx:id="roomNumber" prefWidth="131.20000000000005" text="Номер комнаты" />
+        </columns>
+      </TableView>
+      <Button layoutX="549.0" layoutY="646.0" mnemonicParsing="false" onAction="#onActiveButtonClick" prefHeight="44.0" prefWidth="163.0" text="Активные счета" />
+      <Button layoutX="840.0" layoutY="646.0" mnemonicParsing="false" onAction="#onArchiveButtonClick" prefHeight="44.0" prefWidth="163.0" text="Архив счетов" />
+      <Button fx:id="addEventButton" layoutX="1204.0" layoutY="206.0" mnemonicParsing="false" onAction="#onEventButtonClick" prefHeight="44.0" prefWidth="170.0" text="Добавить меропирятие" visible="false" />
+      <Button fx:id="addServiceButton" layoutX="1204.0" layoutY="310.0" mnemonicParsing="false" onAction="#onServiceButtonClick" prefHeight="44.0" prefWidth="170.0" text="Добавить услугу" visible="false" />
+      <Button fx:id="addBillButton" disable="true" layoutX="1204.0" layoutY="417.0" mnemonicParsing="false" onAction="#onBillButtonClick" prefHeight="44.0" prefWidth="170.0" text="Добавить счёт" visible="false" />
+   </children>
+</AnchorPane>

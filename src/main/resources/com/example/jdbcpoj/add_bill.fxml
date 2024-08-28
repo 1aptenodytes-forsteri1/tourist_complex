@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" prefHeight="800.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jdbcpoj.AddBillController">
+   <children>
+      <Label fx:id="idAlert" layoutX="394.0" layoutY="199.0" prefHeight="18.0" prefWidth="250.0" text="некорректные данные" textFill="RED" visible="false" />
+      <Label fx:id="phoneAlert" layoutX="394.0" layoutY="417.0" prefHeight="18.0" prefWidth="250.0" text="некорректный телефон" textFill="RED" visible="false" />
+      <TextField fx:id="idField" layoutX="394.0" layoutY="165.0" prefHeight="34.0" prefWidth="199.0" AnchorPane.leftAnchor="394.0" AnchorPane.rightAnchor="906.0" AnchorPane.topAnchor="165.0" />
+      <TextField fx:id="nameField" layoutX="394.0" layoutY="236.0" prefHeight="34.0" prefWidth="250.0" AnchorPane.rightAnchor="906.0" AnchorPane.topAnchor="236.0" />
+      <TextField fx:id="surnameField" layoutX="393.0" layoutY="310.0" prefHeight="34.0" prefWidth="250.0" AnchorPane.rightAnchor="906.0" />
+      <TextField fx:id="phoneField" layoutX="394.0" layoutY="383.0" prefHeight="34.0" prefWidth="250.0" AnchorPane.rightAnchor="906.0" />
+      <DatePicker fx:id="checkInPicker" layoutX="471.0" layoutY="459.0" AnchorPane.rightAnchor="906.0" />
+      <DatePicker fx:id="evictionPicker" layoutX="471.0" layoutY="522.0" AnchorPane.bottomAnchor="252.4" AnchorPane.rightAnchor="906.0" />
+      <Label layoutX="300.0" layoutY="169.0" text="id клиента" AnchorPane.leftAnchor="300.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="240.0" text="имя">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="314.0" text="фамилия">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="459.0" text="дата заселения">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="522.0" text="дата выселения">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="296.0" layoutY="387.0" text="телефон">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="741.0" layoutY="166.0" prefHeight="382.0" prefWidth="530.0" AnchorPane.rightAnchor="300.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="106.0" text="номер" />
+          <TableColumn fx:id="rClass" prefWidth="106.0" text="класс" />
+            <TableColumn fx:id="status" prefWidth="106.0" text="статус" />
+            <TableColumn fx:id="beds" prefWidth="106.0" text="места" />
+            <TableColumn fx:id="cost" prefWidth="106.0" text="цена" />
+        </columns>
+      </TableView>
+      <Button layoutX="293.0" layoutY="585.0" mnemonicParsing="false" onAction="#onFindRoomsClick" prefHeight="42.0" prefWidth="115.0" text="Выбрать номер" />
+      <Button layoutX="471.0" layoutY="585.0" mnemonicParsing="false" onAction="#onAddBillClick" prefHeight="42.0" prefWidth="175.0" text="Оформить заказ" AnchorPane.rightAnchor="906.0" />
+      <Label fx:id="dateAlert" layoutX="469.0" layoutY="548.0" prefHeight="18.0" prefWidth="175.0" text="некорректная дата" textFill="RED" visible="false" />
+      <Label fx:id="roomAlert" layoutX="469.0" layoutY="632.0" prefHeight="18.0" prefWidth="175.0" text="выберите номер" textFill="RED" visible="false" />
+      <Label fx:id="endAlert" layoutX="469.0" layoutY="633.0" prefHeight="18.0" prefWidth="175.0" text="заказ оформлен" textFill="#54ea14" visible="false" />
+      <Button layoutX="69.0" layoutY="53.0" mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="42.0" prefWidth="115.0" text="Назад" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="70.0" />
+      <TableView fx:id="clientTable" layoutX="70.0" layoutY="166.0" prefHeight="200.0" prefWidth="152.0">
+        <columns>
+          <TableColumn fx:id="clientId" minWidth="6.399993896484375" prefWidth="42.399993896484375" text="id" />
+          <TableColumn fx:id="clientSurname" prefWidth="106.39996337890625" text="Фамилия" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

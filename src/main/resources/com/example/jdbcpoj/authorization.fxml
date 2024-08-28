@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="1550.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jdbcpoj.AuthorizationController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <AnchorPane fx:id="window" prefHeight="800.0" prefWidth="1550.0">
+        <children>
+            <TextField fx:id="login" layoutX="628.0" layoutY="318.0" prefHeight="26.0" prefWidth="290.0" />
+            <PasswordField fx:id="password" layoutX="628.0" layoutY="401.0" prefHeight="26.0" prefWidth="289.0" />
+
+            <Button layoutX="705.0" layoutY="472.0" onAction="#onHelloButtonClick" prefHeight="38.0" prefWidth="136.0" text="Вход" AnchorPane.leftAnchor="705.0" AnchorPane.rightAnchor="669.0" />
+
+            <Label fx:id="welcomeText" layoutX="681.0" layoutY="528.0" prefHeight="47.0" prefWidth="183.0" textFill="RED">
+            <font>
+               <Font size="18.0" />
+            </font></Label>
+            <Label layoutX="645.0" layoutY="211.0" text="Вход в систему">
+                <font>
+                    <Font size="32.0" />
+                </font>
+            </Label>
+            <Label layoutX="533.0" layoutY="317.0" text="Логин">
+                <font>
+                    <Font size="19.0" />
+                </font>
+            </Label>
+            <Label layoutX="533.0" layoutY="400.0" text="Пароль">
+                <font>
+                    <Font size="19.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
+
+</VBox>
