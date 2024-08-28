@@ -1,1 +1,1 @@
-# tourist_complex
+A desktop application utilizing a database with JavaFX
